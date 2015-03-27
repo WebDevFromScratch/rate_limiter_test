@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: rate_limiter_dev
+
+test:
+  <<: *default
+  database: rate_limiter_test
+
+production:
+  <<: *default
+  database: rate_limiter_prod
