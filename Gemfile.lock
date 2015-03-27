@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/WebDevFromScratch/rack_workshop
-  revision: 18f06da8ac9eb848aec199ff6665a20882d82d21
+  revision: 4d320f4e435b369496701d93217092b0a52f0ce1
   specs:
     rate_limiter_pa (0.1.0)
 
