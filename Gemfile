@@ -30,6 +30,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'unicorn'
 gem 'rails_12factor', group: :production
 gem 'rate_limiter_pa', git: 'https://github.com/WebDevFromScratch/rack_workshop'
+gem 'dalli'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

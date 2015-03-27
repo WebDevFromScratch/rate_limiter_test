@@ -23,6 +23,17 @@ module RateLimiterPaTest
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
-    config.middleware.use(Rack::RateLimiterPa)
+    if Rails.env.production?
+      config.middleware.use(Rack::RateLimiterPa, store: Dalli::Client.new((ENV["MEMCACHIER_SERVERS"] || "").split(","),
+                    {:username => ENV["MEMCACHIER_USERNAME"],
+                     :password => ENV["MEMCACHIER_PASSWORD"],
+                     :failover => true,
+                     :socket_timeout => 1.5,
+                     :socket_failure_delay => 0.2
+                    })
+      )
+    else
+      config.middleware.use(Rack::RateLimiterPa)
+    end
   end
 end
