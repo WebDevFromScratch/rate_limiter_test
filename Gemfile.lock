@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/WebDevFromScratch/rack_workshop
-  revision: 4d320f4e435b369496701d93217092b0a52f0ce1
+  revision: 29cceea1555f7b9be597b9c620f1f5a0efc64302
   specs:
     rate_limiter_pa (0.1.0)
 
@@ -56,7 +56,7 @@ GEM
       execjs
     coffee-script-source (1.9.1)
     columnize (0.9.0)
-    dalli (2.7.3)
+    dalli (2.7.4)
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.4.0)
